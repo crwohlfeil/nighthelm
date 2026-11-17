@@ -28,4 +28,4 @@ No solver is selected. Build a small interface around the selected backend so fi
 
 ## Recommendation
 
-Borrow ideas from all three projects, not their code. Start with the StepSolve-style narrow output boundary, PiFinder-style absolute solve plus optional estimator separation, and PushNav's reminder to measure actual solve cadence. Keep Mac replay as an explicit supported development mode. Revisit source-level reuse only for a clearly scoped component after its license, API, and maintenance costs are understood.
+Use all three projects as references, not code sources. Start with the StepSolve-style narrow output boundary, PiFinder's documented separation of absolute solves and optional estimation, and PushNav's reminder to measure actual solve cadence. Keep Mac replay as an explicit supported development mode. For components from projects other than PiFinder, consider source-level reuse only after reviewing their license, API, and maintenance costs.

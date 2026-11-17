@@ -55,14 +55,14 @@ PiFinder also splits work into processes and uses a specialized centroid process
 | Hardware fakes and replay | Adapt | Supports macOS work and deterministic diagnostics |
 | Tetra3/Cedar-Solve or Astrometry.net | Evaluate as dependencies/tools | Both avoid re-inventing star matching; package/license/performance suitability remain to be checked |
 | PiFinder UI, catalog, charting, and full process graph | Do not port for MVP | Outside Nighthelm's headless positioning scope |
-| PiFinder IMU and camera driver code | Do not copy initially | Avoid tight hardware coupling and license obligations; implement adapters after choosing actual hardware |
+| PiFinder IMU and camera driver code | Do not use, copy, or adapt | Nighthelm treats PiFinder as a design and behavior reference only |
 | Cedar detect binary | Do not redistribute or depend on it without licensing review | It is not covered by the root repo license alone |
 
 ## Licensing and reuse implications
 
 The repository's top-level `LICENSE` identifies GPL-3.0. Its `bin/README.md` says Cedar-Solve is Apache-2.0, while Cedar Detect is distributed under Functional Source License FSL-1.1-MIT, with the PiFinder binaries distributed under a separate explicit license from the copyright holder because PiFinder is also sold commercially. These terms must not be collapsed into the assumption that every file or binary is GPL-3.0 or permissively reusable.
 
-Nighthelm's initial plan is to use no PiFinder source code. If substantial GPL-3.0 code is later copied or adapted into a combined/distributed program, source distribution and downstream licensing obligations may apply; obtain legal review for the intended distribution and compatibility. FSL restrictions are distinct and may be incompatible with the project's open-source distribution goals for a bundled component. Apache-2.0 is selected for Nighthelm's original work because it is permissive and includes an express patent license; this does not relicense upstream code or waive third-party license obligations. Dependency license notices and attribution will be handled when dependencies are selected.
+Nighthelm's policy is to treat PiFinder solely as a design and behavior reference: Nighthelm must not use, copy, or adapt PiFinder source code. Its implementation will be independently written. If this policy is ever reconsidered, first review the applicable source and binary licenses and obtain legal review; substantial GPL-3.0 code in a combined/distributed program can carry source-distribution and downstream licensing obligations. FSL restrictions are distinct and may conflict with the project's open-source distribution goals for a bundled component. MIT is selected for Nighthelm's original work, matching the project owner's preference. Apache-2.0's express patent grant was considered, but there is no project-specific reason to prefer it here. Neither license choice changes third-party dependency obligations; dependency licenses and notices will be reviewed when dependencies are selected.
 
 ## Sources
 

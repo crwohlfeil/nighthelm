@@ -37,4 +37,4 @@ There are no application tests yet. The commands are the intended baseline for t
 
 ## License
 
-Nighthelm's original work is licensed under Apache-2.0. The project intends to implement its own code and use upstream libraries through their published interfaces. Review dependency licenses before adoption, and obtain a separate review before copying or adapting code from another project. See the [PiFinder licensing analysis](docs/research/pifinder.md).
+Nighthelm's original work is licensed under MIT. The project intends to implement its own code and use upstream libraries through their published interfaces. Review dependency licenses before adoption. PiFinder is a design and behavior reference only; Nighthelm does not use, copy, or adapt PiFinder source code. See the [PiFinder licensing analysis](docs/research/pifinder.md).

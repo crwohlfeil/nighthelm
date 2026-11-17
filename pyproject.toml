@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Headless camera-based PushTo navigation for manually aimed telescopes"
 readme = "README.md"
 requires-python = ">=3.11"
-license = "Apache-2.0"
+license = "MIT"
 classifiers = ["Development Status :: 1 - Planning", "Operating System :: OS Independent"]
 dependencies = []
 

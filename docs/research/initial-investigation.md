@@ -6,7 +6,7 @@
 
 Nighthelm should be an independent, Python-first, headless PushTo tool. Its first complete software path should turn a known or recorded sky image into an absolute sky pointing and provide that position over an LX200-compatible TCP server. The observer moves the telescope manually; no motors, encoders, or GoTo controller are required. GPS is optional. IMU motion tracking is valuable for responsive updates but should follow a working camera solve and coordinate-serving path.
 
-PiFinder is the closest mature reference for a self-contained Pi camera, plate solver, IMU estimator, GPS, and SkySafari system. Its architecture and engineering lessons are useful, but source reuse has meaningful constraints: the repository is GPL-3.0 and the Cedar detect binary has separately documented licensing terms. Nighthelm should initially reuse ideas and interfaces, not source. StepSolve is a particularly relevant headless/LX200 comparator, while PushNav shows that plate solving can be hosted on a general-purpose computer and that continuous camera solving is a plausible alternative to an IMU-first design.
+PiFinder is the closest mature reference for a self-contained Pi camera, plate solver, IMU estimator, GPS, and SkySafari system. Its architecture and engineering lessons are useful, but source reuse has meaningful constraints: the repository is GPL-3.0 and the Cedar detect binary has separately documented licensing terms. Nighthelm will use PiFinder only as a design and behavior reference and will independently implement its own code. StepSolve is a particularly relevant headless/LX200 comparator, while PushNav shows that plate solving can be hosted on a general-purpose computer and that continuous camera solving is a plausible alternative to an IMU-first design.
 
 For a first hardware prototype, prefer a Raspberry Pi 4 Model B with 2 GB or 4 GB RAM, a CSI camera with a fixed-focus wide-angle lens selected for the camera sensor, and a replaceable IMU breakout. Do not buy the BNO055 by default: Bosch says it is discontinued and not recommended for new designs. GPS, custom PCBs, batteries, and mechanical enclosure should wait until software and pointing requirements are better measured.
 
@@ -58,7 +58,7 @@ Repository existence and current descriptions were checked on 2026-11-16:
 - How should users calibrate and repeatably mount the camera relative to the telescope optical axis?
 - Which IMU is available and supportable long-term, and is magnetometer heading useful or a source of local magnetic error?
 - Which battery can provide a full observing session safely while powering the Pi and camera?
-- Is Apache-2.0 acceptable for the project owner? This report recommends it for a permissive license with an explicit patent grant; it does not change the obligations of third-party dependencies.
+- MIT is selected for Nighthelm's original work, matching the project owner's preference. Apache-2.0's express patent grant was considered, but there is no project-specific reason to prefer it here. This license does not change third-party dependency obligations.
 
 ## Proposed next steps
 
